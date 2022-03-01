@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/test1.dir/test1.cpp.o CMakeFiles/test1.dir/src/redis_handler.cpp.o  -o test1  -lhiredis 

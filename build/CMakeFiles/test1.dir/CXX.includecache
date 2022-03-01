@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/include/redis_handler.h
+hiredis/hiredis.h
+-
+string
+-
+
+/home/heyjude/workspace/projects/compete/src/include/redis_handler.h
+hiredis/hiredis.h
+-
+string
+-
+
+/home/heyjude/workspace/projects/compete/src/redis_handler.cpp
+include/redis_handler.h
+/home/heyjude/workspace/projects/compete/src/include/redis_handler.h
+string
+-
+cstring
+-
+iostream
+-
+
+/home/heyjude/workspace/projects/compete/test1.cpp
+iostream
+-
+string
+-
+include/redis_handler.h
+/home/heyjude/workspace/projects/compete/include/redis_handler.h
+

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/target.dir/main.cpp.o  -o target  -Wl,-rpath,/usr/local/lib /usr/local/lib/libhiredis.so /usr/local/lib/libredis++.so 
