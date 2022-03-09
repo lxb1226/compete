@@ -70,32 +70,64 @@ CMakeFiles/main.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/heyjude/workspace/projects/compete/main.cpp -o CMakeFiles/main.dir/main.cpp.s
 
-CMakeFiles/main.dir/src/redis_handler.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/redis_handler.cpp.o: ../src/redis_handler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/heyjude/workspace/projects/compete/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/src/redis_handler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/redis_handler.cpp.o -c /home/heyjude/workspace/projects/compete/src/redis_handler.cpp
+CMakeFiles/main.dir/src/thread.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/thread.cpp.o: ../src/thread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/heyjude/workspace/projects/compete/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/src/thread.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/thread.cpp.o -c /home/heyjude/workspace/projects/compete/src/thread.cpp
 
-CMakeFiles/main.dir/src/redis_handler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/redis_handler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/heyjude/workspace/projects/compete/src/redis_handler.cpp > CMakeFiles/main.dir/src/redis_handler.cpp.i
+CMakeFiles/main.dir/src/thread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/thread.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/heyjude/workspace/projects/compete/src/thread.cpp > CMakeFiles/main.dir/src/thread.cpp.i
 
-CMakeFiles/main.dir/src/redis_handler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/redis_handler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/heyjude/workspace/projects/compete/src/redis_handler.cpp -o CMakeFiles/main.dir/src/redis_handler.cpp.s
+CMakeFiles/main.dir/src/thread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/thread.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/heyjude/workspace/projects/compete/src/thread.cpp -o CMakeFiles/main.dir/src/thread.cpp.s
+
+CMakeFiles/main.dir/src/RedisTools.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/RedisTools.cpp.o: ../src/RedisTools.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/heyjude/workspace/projects/compete/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/src/RedisTools.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/RedisTools.cpp.o -c /home/heyjude/workspace/projects/compete/src/RedisTools.cpp
+
+CMakeFiles/main.dir/src/RedisTools.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/RedisTools.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/heyjude/workspace/projects/compete/src/RedisTools.cpp > CMakeFiles/main.dir/src/RedisTools.cpp.i
+
+CMakeFiles/main.dir/src/RedisTools.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/RedisTools.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/heyjude/workspace/projects/compete/src/RedisTools.cpp -o CMakeFiles/main.dir/src/RedisTools.cpp.s
+
+CMakeFiles/main.dir/src/serialtest.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/serialtest.cpp.o: ../src/serialtest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/heyjude/workspace/projects/compete/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/src/serialtest.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/serialtest.cpp.o -c /home/heyjude/workspace/projects/compete/src/serialtest.cpp
+
+CMakeFiles/main.dir/src/serialtest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/serialtest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/heyjude/workspace/projects/compete/src/serialtest.cpp > CMakeFiles/main.dir/src/serialtest.cpp.i
+
+CMakeFiles/main.dir/src/serialtest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/serialtest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/heyjude/workspace/projects/compete/src/serialtest.cpp -o CMakeFiles/main.dir/src/serialtest.cpp.s
 
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.o" \
-"CMakeFiles/main.dir/src/redis_handler.cpp.o"
+"CMakeFiles/main.dir/src/thread.cpp.o" \
+"CMakeFiles/main.dir/src/RedisTools.cpp.o" \
+"CMakeFiles/main.dir/src/serialtest.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/main.cpp.o
-main: CMakeFiles/main.dir/src/redis_handler.cpp.o
+main: CMakeFiles/main.dir/src/thread.cpp.o
+main: CMakeFiles/main.dir/src/RedisTools.cpp.o
+main: CMakeFiles/main.dir/src/serialtest.cpp.o
 main: CMakeFiles/main.dir/build.make
+main: /usr/local/lib/libhiredis.so
+main: /usr/local/lib/libboost_serialization.so.1.78.0
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/heyjude/workspace/projects/compete/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/heyjude/workspace/projects/compete/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

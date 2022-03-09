@@ -111,17 +111,95 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named target
+# Target rules for targets named main
 
 # Build rule for target.
-target: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 target
-.PHONY : target
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-target/fast:
-	$(MAKE) -f CMakeFiles/target.dir/build.make CMakeFiles/target.dir/build
-.PHONY : target/fast
+main/fast:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+#=============================================================================
+# Target rules for targets named test_derived
+
+# Build rule for target.
+test_derived: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_derived
+.PHONY : test_derived
+
+# fast build rule for target.
+test_derived/fast:
+	$(MAKE) -f tests/CMakeFiles/test_derived.dir/build.make tests/CMakeFiles/test_derived.dir/build
+.PHONY : test_derived/fast
+
+#=============================================================================
+# Target rules for targets named demo
+
+# Build rule for target.
+demo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 demo
+.PHONY : demo
+
+# fast build rule for target.
+demo/fast:
+	$(MAKE) -f tests/CMakeFiles/demo.dir/build.make tests/CMakeFiles/demo.dir/build
+.PHONY : demo/fast
+
+#=============================================================================
+# Target rules for targets named test
+
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	$(MAKE) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/build
+.PHONY : test/fast
+
+#=============================================================================
+# Target rules for targets named test_name
+
+# Build rule for target.
+test_name: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_name
+.PHONY : test_name
+
+# fast build rule for target.
+test_name/fast:
+	$(MAKE) -f tests/CMakeFiles/test_name.dir/build.make tests/CMakeFiles/test_name.dir/build
+.PHONY : test_name/fast
+
+#=============================================================================
+# Target rules for targets named test_serialization_binary
+
+# Build rule for target.
+test_serialization_binary: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_serialization_binary
+.PHONY : test_serialization_binary
+
+# fast build rule for target.
+test_serialization_binary/fast:
+	$(MAKE) -f tests/CMakeFiles/test_serialization_binary.dir/build.make tests/CMakeFiles/test_serialization_binary.dir/build
+.PHONY : test_serialization_binary/fast
+
+#=============================================================================
+# Target rules for targets named test_boost
+
+# Build rule for target.
+test_boost: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_boost
+.PHONY : test_boost
+
+# fast build rule for target.
+test_boost/fast:
+	$(MAKE) -f tests/CMakeFiles/test_boost.dir/build.make tests/CMakeFiles/test_boost.dir/build
+.PHONY : test_boost/fast
 
 #=============================================================================
 # Target rules for targets named test_redisplusplus
@@ -142,7 +220,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/target.dir/build.make CMakeFiles/target.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -151,7 +229,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/target.dir/build.make CMakeFiles/target.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -160,8 +238,89 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/target.dir/build.make CMakeFiles/target.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+src/RedisTools.o: src/RedisTools.cpp.o
+
+.PHONY : src/RedisTools.o
+
+# target to build an object file
+src/RedisTools.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/RedisTools.cpp.o
+.PHONY : src/RedisTools.cpp.o
+
+src/RedisTools.i: src/RedisTools.cpp.i
+
+.PHONY : src/RedisTools.i
+
+# target to preprocess a source file
+src/RedisTools.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/RedisTools.cpp.i
+.PHONY : src/RedisTools.cpp.i
+
+src/RedisTools.s: src/RedisTools.cpp.s
+
+.PHONY : src/RedisTools.s
+
+# target to generate assembly for a file
+src/RedisTools.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/RedisTools.cpp.s
+.PHONY : src/RedisTools.cpp.s
+
+src/serialtest.o: src/serialtest.cpp.o
+
+.PHONY : src/serialtest.o
+
+# target to build an object file
+src/serialtest.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/serialtest.cpp.o
+.PHONY : src/serialtest.cpp.o
+
+src/serialtest.i: src/serialtest.cpp.i
+
+.PHONY : src/serialtest.i
+
+# target to preprocess a source file
+src/serialtest.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/serialtest.cpp.i
+.PHONY : src/serialtest.cpp.i
+
+src/serialtest.s: src/serialtest.cpp.s
+
+.PHONY : src/serialtest.s
+
+# target to generate assembly for a file
+src/serialtest.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/serialtest.cpp.s
+.PHONY : src/serialtest.cpp.s
+
+src/thread.o: src/thread.cpp.o
+
+.PHONY : src/thread.o
+
+# target to build an object file
+src/thread.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/thread.cpp.o
+.PHONY : src/thread.cpp.o
+
+src/thread.i: src/thread.cpp.i
+
+.PHONY : src/thread.i
+
+# target to preprocess a source file
+src/thread.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/thread.cpp.i
+.PHONY : src/thread.cpp.i
+
+src/thread.s: src/thread.cpp.s
+
+.PHONY : src/thread.s
+
+# target to generate assembly for a file
+src/thread.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/thread.cpp.s
+.PHONY : src/thread.cpp.s
 
 # Help Target
 help:
@@ -171,11 +330,26 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... target"
+	@echo "... main"
+	@echo "... test_derived"
+	@echo "... demo"
+	@echo "... test"
+	@echo "... test_name"
+	@echo "... test_serialization_binary"
+	@echo "... test_boost"
 	@echo "... test_redisplusplus"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/RedisTools.o"
+	@echo "... src/RedisTools.i"
+	@echo "... src/RedisTools.s"
+	@echo "... src/serialtest.o"
+	@echo "... src/serialtest.i"
+	@echo "... src/serialtest.s"
+	@echo "... src/thread.o"
+	@echo "... src/thread.i"
+	@echo "... src/thread.s"
 .PHONY : help
 
 

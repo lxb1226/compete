@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/heyjude/workspace/projects/compete/third_party 
+CXX_INCLUDES = -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests 
 

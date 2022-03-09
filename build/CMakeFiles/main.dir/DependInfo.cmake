@@ -5,13 +5,22 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/heyjude/workspace/projects/compete/main.cpp" "/home/heyjude/workspace/projects/compete/build/CMakeFiles/main.dir/main.cpp.o"
-  "/home/heyjude/workspace/projects/compete/src/redis_handler.cpp" "/home/heyjude/workspace/projects/compete/build/CMakeFiles/main.dir/src/redis_handler.cpp.o"
+  "/home/heyjude/workspace/projects/compete/src/RedisTools.cpp" "/home/heyjude/workspace/projects/compete/build/CMakeFiles/main.dir/src/RedisTools.cpp.o"
+  "/home/heyjude/workspace/projects/compete/src/serialtest.cpp" "/home/heyjude/workspace/projects/compete/build/CMakeFiles/main.dir/src/serialtest.cpp.o"
+  "/home/heyjude/workspace/projects/compete/src/thread.cpp" "/home/heyjude/workspace/projects/compete/build/CMakeFiles/main.dir/src/thread.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "BOOST_SERIALIZATION_DYN_LINK"
+  "BOOST_SERIALIZATION_NO_LIB"
+  )
+
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../src"
+  "../third_party"
+  "src"
   )
 
 # Targets to which this target links.

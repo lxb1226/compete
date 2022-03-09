@@ -111,6 +111,96 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+tests/CMakeFiles/test_derived.dir/rule:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_derived.dir/rule
+.PHONY : tests/CMakeFiles/test_derived.dir/rule
+
+# Convenience name for target.
+test_derived: tests/CMakeFiles/test_derived.dir/rule
+
+.PHONY : test_derived
+
+# fast build rule for target.
+test_derived/fast:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_derived.dir/build.make tests/CMakeFiles/test_derived.dir/build
+.PHONY : test_derived/fast
+
+# Convenience name for target.
+tests/CMakeFiles/demo.dir/rule:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/demo.dir/rule
+.PHONY : tests/CMakeFiles/demo.dir/rule
+
+# Convenience name for target.
+demo: tests/CMakeFiles/demo.dir/rule
+
+.PHONY : demo
+
+# fast build rule for target.
+demo/fast:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/demo.dir/build.make tests/CMakeFiles/demo.dir/build
+.PHONY : demo/fast
+
+# Convenience name for target.
+tests/CMakeFiles/test.dir/rule:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test.dir/rule
+.PHONY : tests/CMakeFiles/test.dir/rule
+
+# Convenience name for target.
+test: tests/CMakeFiles/test.dir/rule
+
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/build
+.PHONY : test/fast
+
+# Convenience name for target.
+tests/CMakeFiles/test_name.dir/rule:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_name.dir/rule
+.PHONY : tests/CMakeFiles/test_name.dir/rule
+
+# Convenience name for target.
+test_name: tests/CMakeFiles/test_name.dir/rule
+
+.PHONY : test_name
+
+# fast build rule for target.
+test_name/fast:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_name.dir/build.make tests/CMakeFiles/test_name.dir/build
+.PHONY : test_name/fast
+
+# Convenience name for target.
+tests/CMakeFiles/test_serialization_binary.dir/rule:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_serialization_binary.dir/rule
+.PHONY : tests/CMakeFiles/test_serialization_binary.dir/rule
+
+# Convenience name for target.
+test_serialization_binary: tests/CMakeFiles/test_serialization_binary.dir/rule
+
+.PHONY : test_serialization_binary
+
+# fast build rule for target.
+test_serialization_binary/fast:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_serialization_binary.dir/build.make tests/CMakeFiles/test_serialization_binary.dir/build
+.PHONY : test_serialization_binary/fast
+
+# Convenience name for target.
+tests/CMakeFiles/test_boost.dir/rule:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_boost.dir/rule
+.PHONY : tests/CMakeFiles/test_boost.dir/rule
+
+# Convenience name for target.
+test_boost: tests/CMakeFiles/test_boost.dir/rule
+
+.PHONY : test_boost
+
+# fast build rule for target.
+test_boost/fast:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_boost.dir/build.make tests/CMakeFiles/test_boost.dir/build
+.PHONY : test_boost/fast
+
+# Convenience name for target.
 tests/CMakeFiles/test_redisplusplus.dir/rule:
 	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_redisplusplus.dir/rule
 .PHONY : tests/CMakeFiles/test_redisplusplus.dir/rule
@@ -124,6 +214,171 @@ test_redisplusplus: tests/CMakeFiles/test_redisplusplus.dir/rule
 test_redisplusplus/fast:
 	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_redisplusplus.dir/build.make tests/CMakeFiles/test_redisplusplus.dir/build
 .PHONY : test_redisplusplus/fast
+
+demo.o: demo.cpp.o
+
+.PHONY : demo.o
+
+# target to build an object file
+demo.cpp.o:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/demo.dir/build.make tests/CMakeFiles/demo.dir/demo.cpp.o
+.PHONY : demo.cpp.o
+
+demo.i: demo.cpp.i
+
+.PHONY : demo.i
+
+# target to preprocess a source file
+demo.cpp.i:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/demo.dir/build.make tests/CMakeFiles/demo.dir/demo.cpp.i
+.PHONY : demo.cpp.i
+
+demo.s: demo.cpp.s
+
+.PHONY : demo.s
+
+# target to generate assembly for a file
+demo.cpp.s:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/demo.dir/build.make tests/CMakeFiles/demo.dir/demo.cpp.s
+.PHONY : demo.cpp.s
+
+serialtest.o: serialtest.cpp.o
+
+.PHONY : serialtest.o
+
+# target to build an object file
+serialtest.cpp.o:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/serialtest.cpp.o
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_name.dir/build.make tests/CMakeFiles/test_name.dir/serialtest.cpp.o
+.PHONY : serialtest.cpp.o
+
+serialtest.i: serialtest.cpp.i
+
+.PHONY : serialtest.i
+
+# target to preprocess a source file
+serialtest.cpp.i:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/serialtest.cpp.i
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_name.dir/build.make tests/CMakeFiles/test_name.dir/serialtest.cpp.i
+.PHONY : serialtest.cpp.i
+
+serialtest.s: serialtest.cpp.s
+
+.PHONY : serialtest.s
+
+# target to generate assembly for a file
+serialtest.cpp.s:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/serialtest.cpp.s
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_name.dir/build.make tests/CMakeFiles/test_name.dir/serialtest.cpp.s
+.PHONY : serialtest.cpp.s
+
+test.o: test.cpp.o
+
+.PHONY : test.o
+
+# target to build an object file
+test.cpp.o:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test.cpp.o
+.PHONY : test.cpp.o
+
+test.i: test.cpp.i
+
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cpp.i:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test.dir/build.make tests/CMakeFiles/test.dir/test.cpp.s
+.PHONY : test.cpp.s
+
+test_boost.o: test_boost.cpp.o
+
+.PHONY : test_boost.o
+
+# target to build an object file
+test_boost.cpp.o:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_boost.dir/build.make tests/CMakeFiles/test_boost.dir/test_boost.cpp.o
+.PHONY : test_boost.cpp.o
+
+test_boost.i: test_boost.cpp.i
+
+.PHONY : test_boost.i
+
+# target to preprocess a source file
+test_boost.cpp.i:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_boost.dir/build.make tests/CMakeFiles/test_boost.dir/test_boost.cpp.i
+.PHONY : test_boost.cpp.i
+
+test_boost.s: test_boost.cpp.s
+
+.PHONY : test_boost.s
+
+# target to generate assembly for a file
+test_boost.cpp.s:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_boost.dir/build.make tests/CMakeFiles/test_boost.dir/test_boost.cpp.s
+.PHONY : test_boost.cpp.s
+
+test_derived.o: test_derived.cpp.o
+
+.PHONY : test_derived.o
+
+# target to build an object file
+test_derived.cpp.o:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_derived.dir/build.make tests/CMakeFiles/test_derived.dir/test_derived.cpp.o
+.PHONY : test_derived.cpp.o
+
+test_derived.i: test_derived.cpp.i
+
+.PHONY : test_derived.i
+
+# target to preprocess a source file
+test_derived.cpp.i:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_derived.dir/build.make tests/CMakeFiles/test_derived.dir/test_derived.cpp.i
+.PHONY : test_derived.cpp.i
+
+test_derived.s: test_derived.cpp.s
+
+.PHONY : test_derived.s
+
+# target to generate assembly for a file
+test_derived.cpp.s:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_derived.dir/build.make tests/CMakeFiles/test_derived.dir/test_derived.cpp.s
+.PHONY : test_derived.cpp.s
+
+test_name.o: test_name.cpp.o
+
+.PHONY : test_name.o
+
+# target to build an object file
+test_name.cpp.o:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_name.dir/build.make tests/CMakeFiles/test_name.dir/test_name.cpp.o
+.PHONY : test_name.cpp.o
+
+test_name.i: test_name.cpp.i
+
+.PHONY : test_name.i
+
+# target to preprocess a source file
+test_name.cpp.i:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_name.dir/build.make tests/CMakeFiles/test_name.dir/test_name.cpp.i
+.PHONY : test_name.cpp.i
+
+test_name.s: test_name.cpp.s
+
+.PHONY : test_name.s
+
+# target to generate assembly for a file
+test_name.cpp.s:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_name.dir/build.make tests/CMakeFiles/test_name.dir/test_name.cpp.s
+.PHONY : test_name.cpp.s
 
 test_redisplusplus.o: test_redisplusplus.cpp.o
 
@@ -152,6 +407,33 @@ test_redisplusplus.cpp.s:
 	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_redisplusplus.dir/build.make tests/CMakeFiles/test_redisplusplus.dir/test_redisplusplus.cpp.s
 .PHONY : test_redisplusplus.cpp.s
 
+test_serialization_binary.o: test_serialization_binary.cpp.o
+
+.PHONY : test_serialization_binary.o
+
+# target to build an object file
+test_serialization_binary.cpp.o:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_serialization_binary.dir/build.make tests/CMakeFiles/test_serialization_binary.dir/test_serialization_binary.cpp.o
+.PHONY : test_serialization_binary.cpp.o
+
+test_serialization_binary.i: test_serialization_binary.cpp.i
+
+.PHONY : test_serialization_binary.i
+
+# target to preprocess a source file
+test_serialization_binary.cpp.i:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_serialization_binary.dir/build.make tests/CMakeFiles/test_serialization_binary.dir/test_serialization_binary.cpp.i
+.PHONY : test_serialization_binary.cpp.i
+
+test_serialization_binary.s: test_serialization_binary.cpp.s
+
+.PHONY : test_serialization_binary.s
+
+# target to generate assembly for a file
+test_serialization_binary.cpp.s:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_serialization_binary.dir/build.make tests/CMakeFiles/test_serialization_binary.dir/test_serialization_binary.cpp.s
+.PHONY : test_serialization_binary.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,11 +441,38 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... test_derived"
+	@echo "... demo"
 	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... test_name"
+	@echo "... test_serialization_binary"
+	@echo "... test_boost"
 	@echo "... test_redisplusplus"
+	@echo "... demo.o"
+	@echo "... demo.i"
+	@echo "... demo.s"
+	@echo "... serialtest.o"
+	@echo "... serialtest.i"
+	@echo "... serialtest.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
+	@echo "... test_boost.o"
+	@echo "... test_boost.i"
+	@echo "... test_boost.s"
+	@echo "... test_derived.o"
+	@echo "... test_derived.i"
+	@echo "... test_derived.s"
+	@echo "... test_name.o"
+	@echo "... test_name.i"
+	@echo "... test_name.s"
 	@echo "... test_redisplusplus.o"
 	@echo "... test_redisplusplus.i"
 	@echo "... test_redisplusplus.s"
+	@echo "... test_serialization_binary.o"
+	@echo "... test_serialization_binary.i"
+	@echo "... test_serialization_binary.s"
 .PHONY : help
 
 

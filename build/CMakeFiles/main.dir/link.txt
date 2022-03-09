@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/src/redis_handler.cpp.o  -o main  -lhiredis 
+/usr/bin/c++  -g   CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/src/thread.cpp.o CMakeFiles/main.dir/src/RedisTools.cpp.o CMakeFiles/main.dir/src/serialtest.cpp.o  -o main  -Wl,-rpath,/usr/local/lib /usr/local/lib/libhiredis.so -lpthread /usr/local/lib/libboost_serialization.so.1.78.0 

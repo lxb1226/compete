@@ -79,8 +79,6 @@ target_EXTERNAL_OBJECTS =
 
 target: CMakeFiles/target.dir/main.cpp.o
 target: CMakeFiles/target.dir/build.make
-target: /usr/local/lib/libhiredis.so
-target: /usr/local/lib/libredis++.so
 target: CMakeFiles/target.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/heyjude/workspace/projects/compete/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable target"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/target.dir/link.txt --verbose=$(VERBOSE)

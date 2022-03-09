@@ -1,12 +1,40 @@
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-add_executable(test_redisplusplus test_redisplusplus)
+set(Boost_DEBUG ON)
+# set(Boost_COMPILER -mgw8)
+# set(Boost_ARCHITECTURE -x64)
 
 find_path(HIREDIS_HEADER hiredis)
 find_path(REDIS_PLUS_PLUS_HEADER sw)
 find_library(HIREDIS_LIB hiredis)
 find_library(REDIS_PLUS_PLUS_LIB redis++)
+
+include_directories(${PROJECT_SOURCE_DIR}/tests)
+MESSAGE(STATUS "PROJECT_SOURCE_DIR = ${PROJECT_SOURCE_DIR}")
+add_executable(test_redisplusplus test_redisplusplus)
+find_package(Boost REQUIRED serialization)
+
+if(Boost_FOUND)
+    include_directories(${Boost_INCLUDE_DIRS})
+    
+    MESSAGE( STATUS "Boost_INCLUDE_DIRS = ${Boost_INCLUDE_DIRS}.")
+    MESSAGE( STATUS "Boost_LIBRARIES = ${Boost_LIBRARIES}.")
+    MESSAGE( STATUS "Boost_LIB_VERSION = ${Boost_LIB_VERSION}.")
+    add_executable(test_boost test_boost.cpp)
+    add_executable(test_serialization_binary test_serialization_binary.cpp)
+    add_executable(test test.cpp serialtest.cpp)
+    add_executable(test_name test_name.cpp serialtest.cpp)
+    add_executable(demo demo.cpp)
+    add_executable(test_derived test_derived.cpp)
+    target_link_libraries (test_serialization_binary  ${Boost_LIBRARIES})
+    target_link_libraries (test_boost ${Boost_LIBRARIES})
+    target_link_libraries(test ${Boost_LIBRARIES})
+    target_link_libraries(test_name ${Boost_LIBRARIES})
+    target_link_libraries(demo ${Boost_LIBRARIES})
+    target_link_libraries(test_derived ${Boost_LIBRARIES})
+endif()
+
+
 set(headers ${HIREDIS_HEADER} ${REDIS_PLUS_PLUS_HEADER})
 set(libs ${HIREDIS_LIB} ${REDIS_PLUS_PLUS_LIB})
 target_include_directories(test_redisplusplus PUBLIC ${headers})

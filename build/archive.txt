@@ -1,0 +1,3 @@
+22 serialization::archive 19 0 1 0
+0 1 0
+1 11 class CBase 16 8 1947

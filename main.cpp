@@ -1,108 +1,96 @@
-#include <cereal/archives/binary.hpp>
-#include <sw/redis++/redis++.h>
-#include <fstream>
-#include <sstream>
+#include <iostream>
+#include "./src/RedisTools.h"
+#include "./src/serialtest.h"
+#include <unistd.h>
 
-using namespace sw::redis;
 using namespace std;
+using namespace XY;
 
-class BaseTest{
-  int i;
-};
 
-class Test:public BaseTest{
-  std::string s;
-  std::vector<int> v;
-  int buffLen;
-  // char *buff;
-};
-
-class SomeData
+std::ostream &operator<<(std::ostream &os, const Name &name)
 {
-  public:
-    SomeData() = default;
-    int a;
-    int b;
+    return os << "name.i : " << name.getI() << " "
+              << "name.b : " << name.getB() << " ";
+}
 
-  private:
-    friend class cereal::access;
-
-    // cereal supports class versioning although it is considered
-    // optional in cereal
-    template <class Archive>
-    void save( Archive & ar, std::uint32_t const version ) const
-    {
-      ar( a, b ); // operator() is the preferred way of interfacing the archive
-    }
-
-    template <class Archive>
-    void load( Archive & ar, std::uint32_t const version )
-    {
-      ar( a, b );
-    }
-
-    // note the lack of explicitly informing cereal to use a split member load/save
-};
-
-CEREAL_CLASS_VERSION(SomeData, 1);
-
-struct MyType
+std::ostream &operator<<(std::ostream &os, const Name2 &name2)
 {
-  int x;
-  double y;
-  vector<int> vs;
-  string str;
-  SomeData s;
+    return os << "name2.i : " << name2.getI() << " name2.b : " << name2.getB() << " name2.ii : " << name2.getII() << " name2.bb : " << name2.getBB() << " ";
+}
 
-  template <class Archive>
-  void serialize( Archive & ar, std::uint32_t const version )
+std::ostream &operator<<(std::ostream &os, const P2PCall &p2pCall)
+{
+    return os << "p2pCall.a1 : " << p2pCall.a1 << " p2pCall.a : " << p2pCall.a << " p2pCall.yy : " << p2pCall.getYY() << " p2pCall.aa : " << p2pCall.getAA() << " ";
+}
+
+std::ostream &operator<<(std::ostream &os, const McpttCall &call)
+{
+    os << "call.a2 : " << call.a2 << " call.a : " << call.a << " call.m_bool : " << call.getMBool() << " call.m_char : " << call.getMChar()
+       << " call.m_int : " << call.getMInt() << " call.m_double : " << call.getMDouble() << " call.m_str : " << call.getMStr() << endl;
+    os << "call.m_Name : " << call.getVecNamePtr().size() << endl;
+    for (auto &name : call.getVecNamePtr())
+    {
+        cout << *name << endl;
+    }
+    os << "call.m_na : " << call.getName() << " call.m_naptr : " << *call.getNamePtr() << endl;
+    return os;
+}
+
+
+
+McpttCall &constructData()
+{
+  McpttCall *call = new McpttCall(1, 1, true, 'm', 50, 17.89, "fuzhijie");
+  for (int i = 0; i < 100; i++)
   {
-    ar( x, y, vs, str);
-
-    ar( s );
+    Name2 *na = new Name2(i, TT_releaseCall);
+    call->addNameObj(na);
   }
-};
+
+  Name *na1 = new Name(101, TT_newCall);
+  call->addNameObj(na1);
+
+  long long begin, end;
+
+  Name *obj = new Name(102, TT_newCall);
+  call->setNamePtr(obj);
+
+  return *call;
+}
 
 int main()
 {
-  // std::ofstream os("out.bin", std::ios::binary);
-  
-  auto redis = Redis("tcp://127.0.0.1:6379");
+  RedisTool redis;
+  string prefix = "McpttCall";
+  Serialization<McpttCall> seriaTool;
+  int cnt = 0;
+
+  while (1)
   {
-    std::stringstream ss; // any stream can be used
-    cereal::BinaryOutputArchive ar(ss);
-    
-    MyType m;
-    m.x = 1;
-    m.y = 2;
-    m.s.a = 1;
-    m.s.b = 2;
-    m.str = "该功";
-    m.vs = vector<int>{1, 2, 3, 4};
-
-    // Write the data to the archive
-    ar(m);
-    cout << ss.str() << endl;
-    redis.set("key", ss.str());
-  }
-
-  {
-    std::stringstream ss; // any stream can be used
-    ss.str("");
-    auto str = redis.get("key");
-    ss << *str;
-    cereal::BinaryInputArchive iarchive(ss); // Create an input archive
-
-    MyType m;
-    iarchive(m);
-    cout << "m.x : " << m.x << "m.y : " << m.y << endl;
-    cout << "m.s.a : " << m.s.a << "m.s.b : " << m.s.b << endl;
-    cout << "m.str : " << m.str << endl;
-    for(int i = 0; i < m.vs.size(); ++i){
-      cout << m.vs[i] << endl;
+    string name = prefix + "_" + to_string(cnt);
+    McpttCall call = constructData();
+    std::cout << call << endl;
+    stringstream stream;
+    // 序列化
+    seriaTool.serialize(call, stream);
+    cout << stream.str() << endl;
+    int ret = redis.setString(name, stream.str());
+    if (ret < 0)
+    {
+      sleep(5);
+      continue;
     }
 
+    std::string result = redis.getString(name);
+    // 反序列化
+    stream.str(result);
+    McpttCall newCall = seriaTool.deserialize(stream);
+
+    std::cout << "deserialize : " << endl;
+    std::cout << newCall << endl;
+    cnt++;
+    // sleep(5);
   }
-  
+
   return 0;
 }

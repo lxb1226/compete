@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/main.dir/main.cpp.o"
-  "CMakeFiles/main.dir/src/redis_handler.cpp.o"
+  "CMakeFiles/main.dir/src/RedisTools.cpp.o"
+  "CMakeFiles/main.dir/src/serialtest.cpp.o"
+  "CMakeFiles/main.dir/src/thread.cpp.o"
   "main"
   "main.pdb"
 )

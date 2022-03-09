@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/test_derived.dir/test_derived.cpp.o  -o test_derived  -Wl,-rpath,/usr/local/lib /usr/local/lib/libboost_serialization.so.1.78.0 

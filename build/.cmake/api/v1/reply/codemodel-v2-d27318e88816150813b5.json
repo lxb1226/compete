@@ -1,0 +1,140 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "tests",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tests",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "compete",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "demo::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-demo-Debug-a7f41971329045fb1cfc.json",
+					"name" : "demo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main-Debug-eb2acf5a7e9eae6201f5.json",
+					"name" : "main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test-Debug-c95a708126e262e62eda.json",
+					"name" : "test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_boost::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_boost-Debug-902c613cbd6859c7f7a6.json",
+					"name" : "test_boost",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_derived::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_derived-Debug-e723a0e9fad00ac1a830.json",
+					"name" : "test_derived",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_name::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_name-Debug-1f6453cfb1424bc91c2a.json",
+					"name" : "test_name",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_redisplusplus::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_redisplusplus-Debug-3abd5fc24c4b303feaaf.json",
+					"name" : "test_redisplusplus",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_serialization_binary::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_serialization_binary-Debug-62d531713f86f87cc3b5.json",
+					"name" : "test_serialization_binary",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/heyjude/workspace/projects/compete/build",
+		"source" : "/home/heyjude/workspace/projects/compete"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
