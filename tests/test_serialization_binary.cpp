@@ -31,14 +31,14 @@ public:
 void save()
 {
     std::ofstream f("data.dat", std::ofstream::binary);
-    boost::archive::binary_oarchive ar(f, boost::archive::no_header);
+    boost::archive::binary_oarchive ar(f);
 
     // auto data = Example::A;
     Test test;
     test.s = "1234";
     test.buffLen = 12;
-    // ar << make_binary_object(&test, sizeof(test));
-    ar << test;
+    ar << make_binary_object(&test, sizeof(test));
+    // ar << test;
 }
 
 void load()
@@ -54,7 +54,4 @@ int main()
 {
     save();
     load();
-
-    // std::cout << "Size: " << stream.str().size() << "\n";
-    // std::cout << "str : " << stream.str() << "\n";
 }

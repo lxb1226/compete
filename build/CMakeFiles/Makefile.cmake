@@ -60,8 +60,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/main.dir/DependInfo.cmake"
+  "tests/CMakeFiles/test_reconnect.dir/DependInfo.cmake"
   "tests/CMakeFiles/test_derived.dir/DependInfo.cmake"
   "tests/CMakeFiles/demo.dir/DependInfo.cmake"
+  "tests/CMakeFiles/test_connect.dir/DependInfo.cmake"
   "tests/CMakeFiles/test.dir/DependInfo.cmake"
   "tests/CMakeFiles/test_name.dir/DependInfo.cmake"
   "tests/CMakeFiles/test_serialization_binary.dir/DependInfo.cmake"

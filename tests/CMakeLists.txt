@@ -9,14 +9,13 @@ find_path(REDIS_PLUS_PLUS_HEADER sw)
 find_library(HIREDIS_LIB hiredis)
 find_library(REDIS_PLUS_PLUS_LIB redis++)
 
-include_directories(${PROJECT_SOURCE_DIR}/tests)
+include_directories(${PROJECT_SOURCE_DIR}/tests ${PROJECT_SOURCE_DIR}/src)
 MESSAGE(STATUS "PROJECT_SOURCE_DIR = ${PROJECT_SOURCE_DIR}")
 add_executable(test_redisplusplus test_redisplusplus)
 find_package(Boost REQUIRED serialization)
 
 if(Boost_FOUND)
     include_directories(${Boost_INCLUDE_DIRS})
-    
     MESSAGE( STATUS "Boost_INCLUDE_DIRS = ${Boost_INCLUDE_DIRS}.")
     MESSAGE( STATUS "Boost_LIBRARIES = ${Boost_LIBRARIES}.")
     MESSAGE( STATUS "Boost_LIB_VERSION = ${Boost_LIB_VERSION}.")
@@ -35,7 +34,17 @@ if(Boost_FOUND)
 endif()
 
 
+add_executable(test_reconnect test_reconnect.cpp ../src/RedisTools.cpp)
+target_link_directories(test_reconnect PUBLIC ${HIREDIS_HEADER})
+target_link_libraries(test_reconnect ${HIREDIS_LIB})
+
+
 set(headers ${HIREDIS_HEADER} ${REDIS_PLUS_PLUS_HEADER})
 set(libs ${HIREDIS_LIB} ${REDIS_PLUS_PLUS_LIB})
 target_include_directories(test_redisplusplus PUBLIC ${headers})
 target_link_libraries(test_redisplusplus ${libs})
+
+
+add_executable(test_connect test_connect.cpp ../src/redisTool.h)
+target_include_directories(test_connect PUBLIC ${headers})
+target_link_libraries(test_connect ${libs})

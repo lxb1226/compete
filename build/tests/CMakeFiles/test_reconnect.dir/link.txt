@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/test_reconnect.dir/test_reconnect.cpp.o CMakeFiles/test_reconnect.dir/__/src/RedisTools.cpp.o  -o test_reconnect   -L/usr/local/include  -Wl,-rpath,/usr/local/include:/usr/local/lib /usr/local/lib/libhiredis.so 

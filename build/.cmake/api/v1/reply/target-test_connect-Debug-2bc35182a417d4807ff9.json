@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "tests/test_name"
+			"path" : "tests/test_connect"
 		}
 	],
 	"backtrace" : 1,
@@ -11,7 +11,6 @@
 		"commands" : 
 		[
 			"add_executable",
-			"target_link_libraries",
 			"include_directories"
 		],
 		"files" : 
@@ -27,26 +26,20 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 26,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 32,
+				"line" : 48,
 				"parent" : 0
 			},
 			{
 				"file" : 1
 			},
 			{
-				"command" : 2,
+				"command" : 1,
 				"file" : 1,
 				"line" : 9,
-				"parent" : 3
+				"parent" : 2
 			},
 			{
-				"command" : 2,
+				"command" : 1,
 				"file" : 0,
 				"line" : 12,
 				"parent" : 0
@@ -65,37 +58,29 @@
 					"fragment" : "-std=gnu++17"
 				}
 			],
-			"defines" : 
-			[
-				{
-					"backtrace" : 2,
-					"define" : "BOOST_SERIALIZATION_DYN_LINK"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "BOOST_SERIALIZATION_NO_LIB"
-				}
-			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"path" : "/home/heyjude/workspace/projects/compete/third_party"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 4,
 					"path" : "/home/heyjude/workspace/projects/compete/tests"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/heyjude/workspace/projects/compete/src"
 				}
 			],
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
-				0,
-				1
+				0
 			]
 		}
 	],
-	"id" : "test_name::@a44f0ac069e85531cdee",
+	"id" : "test_connect::@a44f0ac069e85531cdee",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -113,15 +98,18 @@
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
-				"fragment" : "/usr/local/lib/libboost_serialization.so.1.78.0",
+				"fragment" : "/usr/local/lib/libhiredis.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/local/lib/libredis++.so",
 				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
-	"name" : "test_name",
-	"nameOnDisk" : "test_name",
+	"name" : "test_connect",
+	"nameOnDisk" : "test_connect",
 	"paths" : 
 	{
 		"build" : "tests",
@@ -133,7 +121,13 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0,
+				0
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
 				1
 			]
 		}
@@ -143,14 +137,13 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "tests/test_name.cpp",
+			"path" : "tests/test_connect.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "tests/serialtest.cpp",
-			"sourceGroupIndex" : 0
+			"path" : "src/redisTool.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

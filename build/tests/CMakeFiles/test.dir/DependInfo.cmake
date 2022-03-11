@@ -19,6 +19,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../third_party"
   "../tests"
+  "../src"
   )
 
 # Targets to which this target links.

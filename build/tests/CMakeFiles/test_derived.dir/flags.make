@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++17
 
 CXX_DEFINES = -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SERIALIZATION_NO_LIB
 
-CXX_INCLUDES = -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests 
+CXX_INCLUDES = -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests -I/home/heyjude/workspace/projects/compete/src 
 

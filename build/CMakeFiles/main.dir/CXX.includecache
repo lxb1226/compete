@@ -13,22 +13,8 @@ iostream
 /home/heyjude/workspace/projects/compete/src/RedisTools.h
 ./src/serialtest.h
 /home/heyjude/workspace/projects/compete/src/serialtest.h
-unistd.h
--
-
-/home/heyjude/workspace/projects/compete/src/RedisConfig.h
-string.h
--
-
-/home/heyjude/workspace/projects/compete/src/RedisTools.cpp
-RedisTools.h
-/home/heyjude/workspace/projects/compete/src/RedisTools.h
-stdio.h
--
-string.h
--
-sstream
--
+./src/serialization.h
+/home/heyjude/workspace/projects/compete/src/serialization.h
 unistd.h
 -
 
@@ -39,14 +25,10 @@ vector
 -
 hiredis/hiredis.h
 -
-RedisConfig.h
-/home/heyjude/workspace/projects/compete/src/RedisConfig.h
+redisConfig.h
+/home/heyjude/workspace/projects/compete/src/redisConfig.h
 thread.h
 /home/heyjude/workspace/projects/compete/src/thread.h
-serialization.h
-/home/heyjude/workspace/projects/compete/src/serialization.h
-serialtest.h
-/home/heyjude/workspace/projects/compete/src/serialtest.h
 
 /home/heyjude/workspace/projects/compete/src/name.h
 iostream
@@ -61,6 +43,14 @@ string
 -
 name.h
 /home/heyjude/workspace/projects/compete/src/name.h
+
+/home/heyjude/workspace/projects/compete/src/redisConfig.h
+string.h
+-
+iostream
+-
+hiredis/hiredis.h
+-
 
 /home/heyjude/workspace/projects/compete/src/serialization.h
 boost/archive/text_oarchive.hpp

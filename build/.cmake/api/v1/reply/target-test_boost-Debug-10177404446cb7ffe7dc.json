@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "tests/test_redisplusplus"
+			"path" : "tests/test_boost"
 		}
 	],
 	"backtrace" : 1,
@@ -11,6 +11,7 @@
 		"commands" : 
 		[
 			"add_executable",
+			"target_link_libraries",
 			"include_directories"
 		],
 		"files" : 
@@ -26,20 +27,26 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 14,
+				"line" : 22,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 29,
 				"parent" : 0
 			},
 			{
 				"file" : 1
 			},
 			{
-				"command" : 1,
+				"command" : 2,
 				"file" : 1,
 				"line" : 9,
-				"parent" : 2
+				"parent" : 3
 			},
 			{
-				"command" : 1,
+				"command" : 2,
 				"file" : 0,
 				"line" : 12,
 				"parent" : 0
@@ -58,15 +65,30 @@
 					"fragment" : "-std=gnu++17"
 				}
 			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "BOOST_SERIALIZATION_DYN_LINK"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "BOOST_SERIALIZATION_NO_LIB"
+				}
+			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"path" : "/home/heyjude/workspace/projects/compete/third_party"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"path" : "/home/heyjude/workspace/projects/compete/tests"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/heyjude/workspace/projects/compete/src"
 				}
 			],
 			"language" : "CXX",
@@ -76,7 +98,7 @@
 			]
 		}
 	],
-	"id" : "test_redisplusplus::@a44f0ac069e85531cdee",
+	"id" : "test_boost::@a44f0ac069e85531cdee",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -94,18 +116,15 @@
 				"role" : "libraries"
 			},
 			{
-				"fragment" : "/usr/local/lib/libhiredis.so",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "/usr/local/lib/libredis++.so",
+				"backtrace" : 2,
+				"fragment" : "/usr/local/lib/libboost_serialization.so.1.78.0",
 				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
-	"name" : "test_redisplusplus",
-	"nameOnDisk" : "test_redisplusplus",
+	"name" : "test_boost",
+	"nameOnDisk" : "test_boost",
 	"paths" : 
 	{
 		"build" : "tests",
@@ -126,7 +145,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "tests/test_redisplusplus.cpp",
+			"path" : "tests/test_boost.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

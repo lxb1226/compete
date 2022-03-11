@@ -4,43 +4,15 @@
 #include <sstream>
 #include <unistd.h>
 
-
-
-using namespace XY;
-
-
-
-// template <class T = McpttCall>
-// void RedisTool::writeRedis(const T &t, string &name)
-// {
-//     stringstream stream;
-//     boost::archive::text_oarchive ar(stream);
-//     cout << *t << endl;
-//     ar &*t;
-
-//     // 写入redis
-//     this.setString(name, stream.str());
-// }
-
-// template<class T = McpttCall>
-// T& RedisTool::readFromRedis(string name){
-//     stringstream steam;
-//     boost::archive::text_iarchive ir(stream);
-//     T newT;
-//     ir & newT;
-//     return std::move(T);
-// }
-
 RedisTool::RedisTool()
 {
     m_redis = NULL;
     init();
-    Thread::start();
 }
 
 RedisTool::~RedisTool()
 {
-    Thread::stop();
+
     if (m_redis != NULL)
     {
         redisFree(m_redis);
@@ -87,6 +59,7 @@ void RedisTool::init()
             m_redis = NULL;
             return;
         }
+        state = REDIS_STATE::ESTABLISH;
         std::cout << " redis connected " << endl;
     }
 }
@@ -95,10 +68,14 @@ int RedisTool::setString(string key, string value)
 {
     if (m_redis == NULL || m_redis->err)
     {
-        // int ret = redisAutoConnect(m_redis, reconn_max, reconn_interval);
+        int ret = redisAutoConnect(&m_redis, reconn_max, reconn_interval);
+        if (ret < 0)
+        {
+            state = REDIS_STATE::RECONN_FIALED;
+            return -1;
+        }
 
         // init();
-        return -1;
     }
 
     redisReply *reply;
@@ -128,9 +105,12 @@ string RedisTool::getString(string key)
 {
     if (m_redis == NULL || m_redis->err)
     {
-        // int ret = redisAutoConnect(m_redis, reconn_max, reconn_interval);
-
-        return NULL;
+        int ret = redisAutoConnect(&m_redis, reconn_max, reconn_interval);
+        if (ret < 0)
+        {
+            state = REDIS_STATE::RECONN_FIALED;
+            return "";
+        }
     }
 
     redisReply *reply;
@@ -189,17 +169,6 @@ string RedisTool::ping()
     }
 }
 
-void RedisTool::runOnce()
-{
-    sleep(3);
-
-    int ret = redisAutoConnect(&m_redis, reconn_max, reconn_interval);
-    if (ret < 0)
-    {
-        std::cout << "redis Auto connect error " << endl;
-    }
-}
-
 int RedisTool::redisAutoConnect(redisContext **redis, int max, int interval)
 {
     // std::cout<<"redis auto connect "<< endl;
@@ -255,6 +224,7 @@ int RedisTool::redisAutoConnect(redisContext **redis, int max, int interval)
             {
                 if (REDIS_OK == redisReconnect(*redis))
                 {
+                    state = REDIS_STATE::ESTABLISH;
                     return 0;
                 }
                 std::cout << " redis reconnect " << ++n << " error : " << (*redis)->errstr << endl;

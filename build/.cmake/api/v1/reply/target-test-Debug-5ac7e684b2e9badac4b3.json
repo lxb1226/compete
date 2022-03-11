@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "tests/test_boost"
+			"path" : "tests/test"
 		}
 	],
 	"backtrace" : 1,
@@ -27,7 +27,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 23,
+				"line" : 24,
 				"parent" : 0
 			},
 			{
@@ -85,16 +85,21 @@
 				{
 					"backtrace" : 5,
 					"path" : "/home/heyjude/workspace/projects/compete/tests"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/heyjude/workspace/projects/compete/src"
 				}
 			],
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1
 			]
 		}
 	],
-	"id" : "test_boost::@a44f0ac069e85531cdee",
+	"id" : "test::@a44f0ac069e85531cdee",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -119,8 +124,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "test_boost",
-	"nameOnDisk" : "test_boost",
+	"name" : "test",
+	"nameOnDisk" : "test",
 	"paths" : 
 	{
 		"build" : "tests",
@@ -132,7 +137,8 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1
 			]
 		}
 	],
@@ -141,7 +147,13 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "tests/test_boost.cpp",
+			"path" : "tests/test.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "tests/serialtest.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

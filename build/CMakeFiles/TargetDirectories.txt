@@ -2,9 +2,11 @@
 /home/heyjude/workspace/projects/compete/build/CMakeFiles/edit_cache.dir
 /home/heyjude/workspace/projects/compete/build/CMakeFiles/main.dir
 /home/heyjude/workspace/projects/compete/build/tests/CMakeFiles/rebuild_cache.dir
+/home/heyjude/workspace/projects/compete/build/tests/CMakeFiles/test_reconnect.dir
 /home/heyjude/workspace/projects/compete/build/tests/CMakeFiles/test_derived.dir
 /home/heyjude/workspace/projects/compete/build/tests/CMakeFiles/demo.dir
 /home/heyjude/workspace/projects/compete/build/tests/CMakeFiles/edit_cache.dir
+/home/heyjude/workspace/projects/compete/build/tests/CMakeFiles/test_connect.dir
 /home/heyjude/workspace/projects/compete/build/tests/CMakeFiles/test.dir
 /home/heyjude/workspace/projects/compete/build/tests/CMakeFiles/test_name.dir
 /home/heyjude/workspace/projects/compete/build/tests/CMakeFiles/test_serialization_binary.dir

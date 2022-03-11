@@ -6,3 +6,19 @@
 
 #IncludeRegexTransform: 
 
+/home/heyjude/workspace/projects/compete/tests/test_serialization_binary.cpp
+boost/archive/binary_oarchive.hpp
+-
+boost/archive/binary_iarchive.hpp
+-
+boost/serialization/binary_object.hpp
+-
+boost/serialization/serialization.hpp
+-
+iostream
+-
+sstream
+-
+fstream
+-
+

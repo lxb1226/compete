@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+tests/CMakeFiles/test_reconnect.dir/rule:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_reconnect.dir/rule
+.PHONY : tests/CMakeFiles/test_reconnect.dir/rule
+
+# Convenience name for target.
+test_reconnect: tests/CMakeFiles/test_reconnect.dir/rule
+
+.PHONY : test_reconnect
+
+# fast build rule for target.
+test_reconnect/fast:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_reconnect.dir/build.make tests/CMakeFiles/test_reconnect.dir/build
+.PHONY : test_reconnect/fast
+
+# Convenience name for target.
 tests/CMakeFiles/test_derived.dir/rule:
 	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_derived.dir/rule
 .PHONY : tests/CMakeFiles/test_derived.dir/rule
@@ -139,6 +154,21 @@ demo: tests/CMakeFiles/demo.dir/rule
 demo/fast:
 	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/demo.dir/build.make tests/CMakeFiles/demo.dir/build
 .PHONY : demo/fast
+
+# Convenience name for target.
+tests/CMakeFiles/test_connect.dir/rule:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_connect.dir/rule
+.PHONY : tests/CMakeFiles/test_connect.dir/rule
+
+# Convenience name for target.
+test_connect: tests/CMakeFiles/test_connect.dir/rule
+
+.PHONY : test_connect
+
+# fast build rule for target.
+test_connect/fast:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_connect.dir/build.make tests/CMakeFiles/test_connect.dir/build
+.PHONY : test_connect/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test.dir/rule:
@@ -214,6 +244,33 @@ test_redisplusplus: tests/CMakeFiles/test_redisplusplus.dir/rule
 test_redisplusplus/fast:
 	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_redisplusplus.dir/build.make tests/CMakeFiles/test_redisplusplus.dir/build
 .PHONY : test_redisplusplus/fast
+
+__/src/RedisTools.o: __/src/RedisTools.cpp.o
+
+.PHONY : __/src/RedisTools.o
+
+# target to build an object file
+__/src/RedisTools.cpp.o:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_reconnect.dir/build.make tests/CMakeFiles/test_reconnect.dir/__/src/RedisTools.cpp.o
+.PHONY : __/src/RedisTools.cpp.o
+
+__/src/RedisTools.i: __/src/RedisTools.cpp.i
+
+.PHONY : __/src/RedisTools.i
+
+# target to preprocess a source file
+__/src/RedisTools.cpp.i:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_reconnect.dir/build.make tests/CMakeFiles/test_reconnect.dir/__/src/RedisTools.cpp.i
+.PHONY : __/src/RedisTools.cpp.i
+
+__/src/RedisTools.s: __/src/RedisTools.cpp.s
+
+.PHONY : __/src/RedisTools.s
+
+# target to generate assembly for a file
+__/src/RedisTools.cpp.s:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_reconnect.dir/build.make tests/CMakeFiles/test_reconnect.dir/__/src/RedisTools.cpp.s
+.PHONY : __/src/RedisTools.cpp.s
 
 demo.o: demo.cpp.o
 
@@ -326,6 +383,33 @@ test_boost.cpp.s:
 	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_boost.dir/build.make tests/CMakeFiles/test_boost.dir/test_boost.cpp.s
 .PHONY : test_boost.cpp.s
 
+test_connect.o: test_connect.cpp.o
+
+.PHONY : test_connect.o
+
+# target to build an object file
+test_connect.cpp.o:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_connect.dir/build.make tests/CMakeFiles/test_connect.dir/test_connect.cpp.o
+.PHONY : test_connect.cpp.o
+
+test_connect.i: test_connect.cpp.i
+
+.PHONY : test_connect.i
+
+# target to preprocess a source file
+test_connect.cpp.i:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_connect.dir/build.make tests/CMakeFiles/test_connect.dir/test_connect.cpp.i
+.PHONY : test_connect.cpp.i
+
+test_connect.s: test_connect.cpp.s
+
+.PHONY : test_connect.s
+
+# target to generate assembly for a file
+test_connect.cpp.s:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_connect.dir/build.make tests/CMakeFiles/test_connect.dir/test_connect.cpp.s
+.PHONY : test_connect.cpp.s
+
 test_derived.o: test_derived.cpp.o
 
 .PHONY : test_derived.o
@@ -379,6 +463,33 @@ test_name.s: test_name.cpp.s
 test_name.cpp.s:
 	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_name.dir/build.make tests/CMakeFiles/test_name.dir/test_name.cpp.s
 .PHONY : test_name.cpp.s
+
+test_reconnect.o: test_reconnect.cpp.o
+
+.PHONY : test_reconnect.o
+
+# target to build an object file
+test_reconnect.cpp.o:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_reconnect.dir/build.make tests/CMakeFiles/test_reconnect.dir/test_reconnect.cpp.o
+.PHONY : test_reconnect.cpp.o
+
+test_reconnect.i: test_reconnect.cpp.i
+
+.PHONY : test_reconnect.i
+
+# target to preprocess a source file
+test_reconnect.cpp.i:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_reconnect.dir/build.make tests/CMakeFiles/test_reconnect.dir/test_reconnect.cpp.i
+.PHONY : test_reconnect.cpp.i
+
+test_reconnect.s: test_reconnect.cpp.s
+
+.PHONY : test_reconnect.s
+
+# target to generate assembly for a file
+test_reconnect.cpp.s:
+	cd /home/heyjude/workspace/projects/compete/build && $(MAKE) -f tests/CMakeFiles/test_reconnect.dir/build.make tests/CMakeFiles/test_reconnect.dir/test_reconnect.cpp.s
+.PHONY : test_reconnect.cpp.s
 
 test_redisplusplus.o: test_redisplusplus.cpp.o
 
@@ -441,14 +552,19 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... test_reconnect"
 	@echo "... test_derived"
 	@echo "... demo"
 	@echo "... edit_cache"
+	@echo "... test_connect"
 	@echo "... test"
 	@echo "... test_name"
 	@echo "... test_serialization_binary"
 	@echo "... test_boost"
 	@echo "... test_redisplusplus"
+	@echo "... __/src/RedisTools.o"
+	@echo "... __/src/RedisTools.i"
+	@echo "... __/src/RedisTools.s"
 	@echo "... demo.o"
 	@echo "... demo.i"
 	@echo "... demo.s"
@@ -461,12 +577,18 @@ help:
 	@echo "... test_boost.o"
 	@echo "... test_boost.i"
 	@echo "... test_boost.s"
+	@echo "... test_connect.o"
+	@echo "... test_connect.i"
+	@echo "... test_connect.s"
 	@echo "... test_derived.o"
 	@echo "... test_derived.i"
 	@echo "... test_derived.s"
 	@echo "... test_name.o"
 	@echo "... test_name.i"
 	@echo "... test_name.s"
+	@echo "... test_reconnect.o"
+	@echo "... test_reconnect.i"
+	@echo "... test_reconnect.s"
 	@echo "... test_redisplusplus.o"
 	@echo "... test_redisplusplus.i"
 	@echo "... test_redisplusplus.s"

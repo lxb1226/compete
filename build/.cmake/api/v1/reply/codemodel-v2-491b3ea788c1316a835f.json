@@ -38,7 +38,9 @@
 						4,
 						5,
 						6,
-						7
+						7,
+						8,
+						9
 					]
 				}
 			],
@@ -61,7 +63,9 @@
 						4,
 						5,
 						6,
-						7
+						7,
+						8,
+						9
 					]
 				}
 			],
@@ -70,7 +74,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "demo::@a44f0ac069e85531cdee",
-					"jsonFile" : "target-demo-Debug-a7f41971329045fb1cfc.json",
+					"jsonFile" : "target-demo-Debug-1e191b3f9383e71831aa.json",
 					"name" : "demo",
 					"projectIndex" : 0
 				},
@@ -84,42 +88,56 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "test::@a44f0ac069e85531cdee",
-					"jsonFile" : "target-test-Debug-c95a708126e262e62eda.json",
+					"jsonFile" : "target-test-Debug-5ac7e684b2e9badac4b3.json",
 					"name" : "test",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "test_boost::@a44f0ac069e85531cdee",
-					"jsonFile" : "target-test_boost-Debug-902c613cbd6859c7f7a6.json",
+					"jsonFile" : "target-test_boost-Debug-10177404446cb7ffe7dc.json",
 					"name" : "test_boost",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
+					"id" : "test_connect::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_connect-Debug-2bc35182a417d4807ff9.json",
+					"name" : "test_connect",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
 					"id" : "test_derived::@a44f0ac069e85531cdee",
-					"jsonFile" : "target-test_derived-Debug-e723a0e9fad00ac1a830.json",
+					"jsonFile" : "target-test_derived-Debug-52d613a420c19301da29.json",
 					"name" : "test_derived",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "test_name::@a44f0ac069e85531cdee",
-					"jsonFile" : "target-test_name-Debug-1f6453cfb1424bc91c2a.json",
+					"jsonFile" : "target-test_name-Debug-d22a34797a0585c1b920.json",
 					"name" : "test_name",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
+					"id" : "test_reconnect::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_reconnect-Debug-0e828a2eb5807116b41e.json",
+					"name" : "test_reconnect",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
 					"id" : "test_redisplusplus::@a44f0ac069e85531cdee",
-					"jsonFile" : "target-test_redisplusplus-Debug-3abd5fc24c4b303feaaf.json",
+					"jsonFile" : "target-test_redisplusplus-Debug-013d5f89da79446ca599.json",
 					"name" : "test_redisplusplus",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "test_serialization_binary::@a44f0ac069e85531cdee",
-					"jsonFile" : "target-test_serialization_binary-Debug-62d531713f86f87cc3b5.json",
+					"jsonFile" : "target-test_serialization_binary-Debug-c6cb73c548d4cd813e7a.json",
 					"name" : "test_serialization_binary",
 					"projectIndex" : 0
 				}

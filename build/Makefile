@@ -124,6 +124,19 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
+# Target rules for targets named test_reconnect
+
+# Build rule for target.
+test_reconnect: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_reconnect
+.PHONY : test_reconnect
+
+# fast build rule for target.
+test_reconnect/fast:
+	$(MAKE) -f tests/CMakeFiles/test_reconnect.dir/build.make tests/CMakeFiles/test_reconnect.dir/build
+.PHONY : test_reconnect/fast
+
+#=============================================================================
 # Target rules for targets named test_derived
 
 # Build rule for target.
@@ -148,6 +161,19 @@ demo: cmake_check_build_system
 demo/fast:
 	$(MAKE) -f tests/CMakeFiles/demo.dir/build.make tests/CMakeFiles/demo.dir/build
 .PHONY : demo/fast
+
+#=============================================================================
+# Target rules for targets named test_connect
+
+# Build rule for target.
+test_connect: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_connect
+.PHONY : test_connect
+
+# fast build rule for target.
+test_connect/fast:
+	$(MAKE) -f tests/CMakeFiles/test_connect.dir/build.make tests/CMakeFiles/test_connect.dir/build
+.PHONY : test_connect/fast
 
 #=============================================================================
 # Target rules for targets named test
@@ -331,8 +357,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
+	@echo "... test_reconnect"
 	@echo "... test_derived"
 	@echo "... demo"
+	@echo "... test_connect"
 	@echo "... test"
 	@echo "... test_name"
 	@echo "... test_serialization_binary"

@@ -27,13 +27,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 27,
+				"line" : 26,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 33,
+				"line" : 32,
 				"parent" : 0
 			},
 			{
@@ -85,6 +85,10 @@
 				{
 					"backtrace" : 5,
 					"path" : "/home/heyjude/workspace/projects/compete/tests"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/heyjude/workspace/projects/compete/src"
 				}
 			],
 			"language" : "CXX",

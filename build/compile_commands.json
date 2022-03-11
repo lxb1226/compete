@@ -21,47 +21,62 @@
 },
 {
   "directory": "/home/heyjude/workspace/projects/compete/build/tests",
-  "command": "/usr/bin/c++  -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SERIALIZATION_NO_LIB -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests  -g   -std=gnu++17 -o CMakeFiles/test_derived.dir/test_derived.cpp.o -c /home/heyjude/workspace/projects/compete/tests/test_derived.cpp",
+  "command": "/usr/bin/c++   -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests -I/home/heyjude/workspace/projects/compete/src  -g   -std=gnu++17 -o CMakeFiles/test_reconnect.dir/test_reconnect.cpp.o -c /home/heyjude/workspace/projects/compete/tests/test_reconnect.cpp",
+  "file": "/home/heyjude/workspace/projects/compete/tests/test_reconnect.cpp"
+},
+{
+  "directory": "/home/heyjude/workspace/projects/compete/build/tests",
+  "command": "/usr/bin/c++   -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests -I/home/heyjude/workspace/projects/compete/src  -g   -std=gnu++17 -o CMakeFiles/test_reconnect.dir/__/src/RedisTools.cpp.o -c /home/heyjude/workspace/projects/compete/src/RedisTools.cpp",
+  "file": "/home/heyjude/workspace/projects/compete/src/RedisTools.cpp"
+},
+{
+  "directory": "/home/heyjude/workspace/projects/compete/build/tests",
+  "command": "/usr/bin/c++  -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SERIALIZATION_NO_LIB -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests -I/home/heyjude/workspace/projects/compete/src  -g   -std=gnu++17 -o CMakeFiles/test_derived.dir/test_derived.cpp.o -c /home/heyjude/workspace/projects/compete/tests/test_derived.cpp",
   "file": "/home/heyjude/workspace/projects/compete/tests/test_derived.cpp"
 },
 {
   "directory": "/home/heyjude/workspace/projects/compete/build/tests",
-  "command": "/usr/bin/c++  -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SERIALIZATION_NO_LIB -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests  -g   -std=gnu++17 -o CMakeFiles/demo.dir/demo.cpp.o -c /home/heyjude/workspace/projects/compete/tests/demo.cpp",
+  "command": "/usr/bin/c++  -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SERIALIZATION_NO_LIB -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests -I/home/heyjude/workspace/projects/compete/src  -g   -std=gnu++17 -o CMakeFiles/demo.dir/demo.cpp.o -c /home/heyjude/workspace/projects/compete/tests/demo.cpp",
   "file": "/home/heyjude/workspace/projects/compete/tests/demo.cpp"
 },
 {
   "directory": "/home/heyjude/workspace/projects/compete/build/tests",
-  "command": "/usr/bin/c++  -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SERIALIZATION_NO_LIB -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests  -g   -std=gnu++17 -o CMakeFiles/test.dir/test.cpp.o -c /home/heyjude/workspace/projects/compete/tests/test.cpp",
+  "command": "/usr/bin/c++   -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests -I/home/heyjude/workspace/projects/compete/src  -g   -std=gnu++17 -o CMakeFiles/test_connect.dir/test_connect.cpp.o -c /home/heyjude/workspace/projects/compete/tests/test_connect.cpp",
+  "file": "/home/heyjude/workspace/projects/compete/tests/test_connect.cpp"
+},
+{
+  "directory": "/home/heyjude/workspace/projects/compete/build/tests",
+  "command": "/usr/bin/c++  -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SERIALIZATION_NO_LIB -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests -I/home/heyjude/workspace/projects/compete/src  -g   -std=gnu++17 -o CMakeFiles/test.dir/test.cpp.o -c /home/heyjude/workspace/projects/compete/tests/test.cpp",
   "file": "/home/heyjude/workspace/projects/compete/tests/test.cpp"
 },
 {
   "directory": "/home/heyjude/workspace/projects/compete/build/tests",
-  "command": "/usr/bin/c++  -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SERIALIZATION_NO_LIB -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests  -g   -std=gnu++17 -o CMakeFiles/test.dir/serialtest.cpp.o -c /home/heyjude/workspace/projects/compete/tests/serialtest.cpp",
+  "command": "/usr/bin/c++  -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SERIALIZATION_NO_LIB -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests -I/home/heyjude/workspace/projects/compete/src  -g   -std=gnu++17 -o CMakeFiles/test.dir/serialtest.cpp.o -c /home/heyjude/workspace/projects/compete/tests/serialtest.cpp",
   "file": "/home/heyjude/workspace/projects/compete/tests/serialtest.cpp"
 },
 {
   "directory": "/home/heyjude/workspace/projects/compete/build/tests",
-  "command": "/usr/bin/c++  -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SERIALIZATION_NO_LIB -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests  -g   -std=gnu++17 -o CMakeFiles/test_name.dir/test_name.cpp.o -c /home/heyjude/workspace/projects/compete/tests/test_name.cpp",
+  "command": "/usr/bin/c++  -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SERIALIZATION_NO_LIB -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests -I/home/heyjude/workspace/projects/compete/src  -g   -std=gnu++17 -o CMakeFiles/test_name.dir/test_name.cpp.o -c /home/heyjude/workspace/projects/compete/tests/test_name.cpp",
   "file": "/home/heyjude/workspace/projects/compete/tests/test_name.cpp"
 },
 {
   "directory": "/home/heyjude/workspace/projects/compete/build/tests",
-  "command": "/usr/bin/c++  -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SERIALIZATION_NO_LIB -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests  -g   -std=gnu++17 -o CMakeFiles/test_name.dir/serialtest.cpp.o -c /home/heyjude/workspace/projects/compete/tests/serialtest.cpp",
+  "command": "/usr/bin/c++  -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SERIALIZATION_NO_LIB -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests -I/home/heyjude/workspace/projects/compete/src  -g   -std=gnu++17 -o CMakeFiles/test_name.dir/serialtest.cpp.o -c /home/heyjude/workspace/projects/compete/tests/serialtest.cpp",
   "file": "/home/heyjude/workspace/projects/compete/tests/serialtest.cpp"
 },
 {
   "directory": "/home/heyjude/workspace/projects/compete/build/tests",
-  "command": "/usr/bin/c++  -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SERIALIZATION_NO_LIB -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests  -g   -std=gnu++17 -o CMakeFiles/test_serialization_binary.dir/test_serialization_binary.cpp.o -c /home/heyjude/workspace/projects/compete/tests/test_serialization_binary.cpp",
+  "command": "/usr/bin/c++  -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SERIALIZATION_NO_LIB -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests -I/home/heyjude/workspace/projects/compete/src  -g   -std=gnu++17 -o CMakeFiles/test_serialization_binary.dir/test_serialization_binary.cpp.o -c /home/heyjude/workspace/projects/compete/tests/test_serialization_binary.cpp",
   "file": "/home/heyjude/workspace/projects/compete/tests/test_serialization_binary.cpp"
 },
 {
   "directory": "/home/heyjude/workspace/projects/compete/build/tests",
-  "command": "/usr/bin/c++  -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SERIALIZATION_NO_LIB -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests  -g   -std=gnu++17 -o CMakeFiles/test_boost.dir/test_boost.cpp.o -c /home/heyjude/workspace/projects/compete/tests/test_boost.cpp",
+  "command": "/usr/bin/c++  -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SERIALIZATION_NO_LIB -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests -I/home/heyjude/workspace/projects/compete/src  -g   -std=gnu++17 -o CMakeFiles/test_boost.dir/test_boost.cpp.o -c /home/heyjude/workspace/projects/compete/tests/test_boost.cpp",
   "file": "/home/heyjude/workspace/projects/compete/tests/test_boost.cpp"
 },
 {
   "directory": "/home/heyjude/workspace/projects/compete/build/tests",
-  "command": "/usr/bin/c++   -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests  -g   -std=gnu++17 -o CMakeFiles/test_redisplusplus.dir/test_redisplusplus.cpp.o -c /home/heyjude/workspace/projects/compete/tests/test_redisplusplus.cpp",
+  "command": "/usr/bin/c++   -I/home/heyjude/workspace/projects/compete/third_party -I/home/heyjude/workspace/projects/compete/tests -I/home/heyjude/workspace/projects/compete/src  -g   -std=gnu++17 -o CMakeFiles/test_redisplusplus.dir/test_redisplusplus.cpp.o -c /home/heyjude/workspace/projects/compete/tests/test_redisplusplus.cpp",
   "file": "/home/heyjude/workspace/projects/compete/tests/test_redisplusplus.cpp"
 }
 ]

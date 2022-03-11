@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/heyjude/workspace/projects/compete/src/redisTool.h
+sw/redis++/redis++.h
+-
+chrono
+-
+iostream
+-
+
+/home/heyjude/workspace/projects/compete/tests/test_connect.cpp
+sw/redis++/redis++.h
+-
+iostream
+-
+unistd.h
+-
+../src/redisTool.h
+/home/heyjude/workspace/projects/compete/src/redisTool.h
+

@@ -1,11 +1,10 @@
 #include <iostream>
 #include "./src/RedisTools.h"
 #include "./src/serialtest.h"
+#include "./src/serialization.h"
 #include <unistd.h>
 
 using namespace std;
-using namespace XY;
-
 
 std::ostream &operator<<(std::ostream &os, const Name &name)
 {
@@ -36,61 +35,68 @@ std::ostream &operator<<(std::ostream &os, const McpttCall &call)
     return os;
 }
 
-
-
 McpttCall &constructData()
 {
-  McpttCall *call = new McpttCall(1, 1, true, 'm', 50, 17.89, "fuzhijie");
-  for (int i = 0; i < 100; i++)
-  {
-    Name2 *na = new Name2(i, TT_releaseCall);
-    call->addNameObj(na);
-  }
+    McpttCall *call = new McpttCall(1, 1, true, 'm', 50, 17.89, "fuzhijie");
+    for (int i = 0; i < 100; i++)
+    {
+        Name2 *na = new Name2(i, TT_releaseCall);
+        call->addNameObj(na);
+    }
 
-  Name *na1 = new Name(101, TT_newCall);
-  call->addNameObj(na1);
+    Name *na1 = new Name(101, TT_newCall);
+    call->addNameObj(na1);
 
-  long long begin, end;
+    long long begin, end;
 
-  Name *obj = new Name(102, TT_newCall);
-  call->setNamePtr(obj);
+    Name *obj = new Name(102, TT_newCall);
+    call->setNamePtr(obj);
 
-  return *call;
+    return *call;
 }
 
 int main()
 {
-  RedisTool redis;
-  string prefix = "McpttCall";
-  Serialization<McpttCall> seriaTool;
-  int cnt = 0;
+    RedisTool redis;
+    string prefix = "McpttCall";
+    Serialization<McpttCall> seriaTool;
+    int cnt = 0;
 
-  while (1)
-  {
-    string name = prefix + "_" + to_string(cnt);
-    McpttCall call = constructData();
-    std::cout << call << endl;
-    stringstream stream;
-    // 序列化
-    seriaTool.serialize(call, stream);
-    cout << stream.str() << endl;
-    int ret = redis.setString(name, stream.str());
-    if (ret < 0)
+    while (1)
     {
-      sleep(5);
-      continue;
+        string name = prefix + "_" + to_string(cnt);
+        McpttCall call = constructData();
+        std::cout << call << endl;
+        stringstream stream;
+        // 序列化
+        seriaTool.serialize(call, stream);
+        cout << stream.str() << endl;
+        int ret = redis.setString(name, stream.str());
+        if (redis.getState() != REDIS_STATE::ESTABLISH)
+        {
+            cout << "redis 断 开了连接" << endl;
+            break;
+        }
+
+        std::string result = redis.getString(name);
+        if (redis.getState() != REDIS_STATE::ESTABLISH)
+        {
+            cout << "redis 断开了连接" << endl;
+            break;
+        }
+        if (result != "")
+        {
+            // 反序列化
+            stream.str(result);
+            McpttCall newCall = seriaTool.deserialize(stream);
+
+            std::cout << "deserialize : " << endl;
+            std::cout << newCall << endl;
+            cnt++;
+        }
+
+        // sleep(5);
     }
 
-    std::string result = redis.getString(name);
-    // 反序列化
-    stream.str(result);
-    McpttCall newCall = seriaTool.deserialize(stream);
-
-    std::cout << "deserialize : " << endl;
-    std::cout << newCall << endl;
-    cnt++;
-    // sleep(5);
-  }
-
-  return 0;
+    return 0;
 }

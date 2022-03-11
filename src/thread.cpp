@@ -1,15 +1,12 @@
 // 线程对象
 
 #include "thread.h"
-using namespace XY;
-
 
 // 构造函数
 Thread::Thread()
-    :   m_run(false)
+    : m_run(false)
 {
 }
-
 
 // 析构函数
 Thread::~Thread()
@@ -17,18 +14,16 @@ Thread::~Thread()
     stop();
 }
 
-
 // 线程执行函数，被线程创建函数调用
-void * Thread::func(void *arg)
+void *Thread::func(void *arg)
 {
     if (NULL != arg)
     {
-        ((Thread *) arg)->run();
+        ((Thread *)arg)->run();
     }
 
     pthread_exit(0);
 }
-
 
 // 启动线程
 void Thread::start()
@@ -40,7 +35,6 @@ void Thread::start()
     }
 }
 
-
 // 停止线程
 void Thread::stop()
 {
@@ -51,7 +45,6 @@ void Thread::stop()
     }
 }
 
-
 // 线程函数
 void Thread::run()
 {
@@ -60,4 +53,3 @@ void Thread::run()
         runOnce();
     }
 }
-
